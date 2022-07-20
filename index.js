@@ -6,14 +6,8 @@ const mondayWork = function(activity = "go to the office") {
     return `This Monday, I will ${activity}.`
 }
 
-function wrapAdjective(parametr = "special"){
-    if (parametr = "*") {
-        return function() {
-            console.log(`You are ${parametr}a hard worker${parametr}!`)
-    }
-    } else if (parametr = "||") {
-        return function() {
-            console.log(`You are ${parametr}a hard worker${parametr}!`)
-    }
+function wrapAdjective(a = "*"){
+    return function(b="special"){
+        return `You are ${a}${b}${a}!`;
     }
 }
